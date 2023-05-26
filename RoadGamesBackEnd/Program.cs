@@ -1,6 +1,15 @@
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors();
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+
+ 
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+);
+app.MapGet("/", () => TypedResults.Ok("Hello Marj World!"));
 
 app.Run();
