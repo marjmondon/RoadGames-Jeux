@@ -23,8 +23,6 @@ function Form({ onSubmit }: FormProps) {
     }
 
     return (
-        <div>
-            <h1>Ajouter des joueurs</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:
@@ -38,7 +36,6 @@ function Form({ onSubmit }: FormProps) {
                 <br />
                 <button type="submit">Submit</button>
             </form>
-        </div>
     );
 }
 
