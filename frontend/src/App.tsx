@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
-import Form from './Form';
-
+import Joueurs from './components/Joueurs/Joueurs';
 
 function App() {
     const [users, setUsers] = useState([])
@@ -24,9 +24,11 @@ function App() {
   return (
     <div className="App">
         <h1>{users}</h1>
-        <div className="Form">
-            <Form onSubmit={handleSubmit}/>
-        </div>
+        <BrowserRouter>
+            <Route path="/joueurs">
+                <Joueurs />
+            </Route>
+        </BrowserRouter>
     </div>
 
   );

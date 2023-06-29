@@ -23,19 +23,22 @@ function Form({ onSubmit }: FormProps) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input type="text" name="name" value={formData.name} onChange={handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Age:
-                <input type="number" name="age" value={formData.age} onChange={handleInputChange} />
-            </label>
-            <br />
-            <button type="submit">Submit</button>
-        </form>
+        <div>
+            <h1>Ajouter des joueurs</h1>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Name:
+                    <input type="text" name="name" value={formData.name} onChange={handleInputChange} />
+                </label>
+                <br />
+                <label>
+                    Age:
+                    <input type="number" name="age" value={formData.age} onChange={handleInputChange} />
+                </label>
+                <br />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     );
 }
 
