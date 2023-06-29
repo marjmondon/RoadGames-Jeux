@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-
 import './App.css';
+import Form from './Form';
+
 
 function App() {
     const [users, setUsers] = useState([])
@@ -23,8 +24,11 @@ function App() {
   return (
     <div className="App">
         <h1>{users}</h1>
-
+        <div className="Form">
+            <Form onSubmit={handleSubmit}/>
+        </div>
     </div>
+
   );
 }
 
