@@ -1,9 +1,10 @@
 import React from 'react';
-import Form from "./Form";
+import Form, { UserForm } from "./Form";
 
 function Joueurs() {
-    function handleSubmit(formData: FormData) {
+    function handleSubmit(formData: UserForm) {
         console.log(formData);
+        //appel du serveur
     }
     return (
         <div>

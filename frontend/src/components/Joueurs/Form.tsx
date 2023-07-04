@@ -1,16 +1,16 @@
 import React from 'react'
 
 interface FormProps {
-    onSubmit: (data: FormData) => void;
+    onSubmit: (data: UserForm) => void;
 }
 
-interface FormData {
+export interface UserForm {
     name: string;
     age: number;
 }
 
 function Form({ onSubmit }: FormProps) {
-    const [formData, setFormData] = React.useState<FormData>({ name: '', age: 0 });
+    const [formData, setFormData] = React.useState<UserForm>({ name: '', age: 0 });
 
     function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
         const { name, value } = event.target;

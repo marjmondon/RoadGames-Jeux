@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Joueurs from './components/Joueurs/Joueurs';
 
@@ -24,11 +23,8 @@ function App() {
   return (
     <div className="App">
         <h1>{users}</h1>
-        <BrowserRouter>
-            <Route path="/joueurs">
-                <Joueurs />
-            </Route>
-        </BrowserRouter>
+        <Joueurs />
+
     </div>
 
   );
